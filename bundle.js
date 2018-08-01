@@ -336,12 +336,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 var todoList = function todoList() {
-  addTodo("buy milk");
+  addTodo();
+  removeAll();
+  changeCheckedStatus();
 };
 
-var addTodo = function addTodo(name) {
-  (0, _main2.default)("button").on("click", function () {
-    return (0, _main2.default)("ul").append("<li>" + name + "</li>");
+var addTodo = function addTodo() {
+  (0, _main2.default)(".add-todo").on("click", function () {
+    var todo = document.querySelector('.task').value;
+    (0, _main2.default)("ul").append("<li>" + todo + "\n      <input type=\"checkbox\" checked  value=\"\"> not done\n      <input type=\"checkbox\" value=\"\"> done</li>");
+  });
+};
+
+var removeAll = function removeAll() {
+  (0, _main2.default)(".remove-all").on("click", function () {
+    (0, _main2.default)("ul").empty();
   });
 };
 
