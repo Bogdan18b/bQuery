@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: './lib/ttt-main.js',
+  entry: './lib/todo_list.js',
   output: {
   path: path.resolve(__dirname, ''),
     filename: 'bundle.js'

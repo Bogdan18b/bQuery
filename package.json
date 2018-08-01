@@ -2,7 +2,7 @@
   "name": "bQuery",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "todo_list.js",
   "directories": {
     "lib": "lib"
   },
