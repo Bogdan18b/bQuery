@@ -256,6 +256,10 @@ exports.default = DomNodeCollection;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _dom_node_collection = __webpack_require__(/*! ./dom_node_collection.js */ "./lib/dom_node_collection.js");
@@ -311,7 +315,11 @@ $b.extend = function (base) {
   return base;
 };
 
-module.exports = $b;
+$b.value = function (node) {
+  return document.querySelector(node).value;
+};
+
+exports.default = $b;
 
 /***/ }),
 
@@ -338,13 +346,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var todoList = function todoList() {
   addTodo();
   removeAll();
-  changeCheckedStatus();
 };
 
 var addTodo = function addTodo() {
   (0, _main2.default)(".add-todo").on("click", function () {
-    var todo = document.querySelector('.task').value;
-    (0, _main2.default)("ul").append("<li>" + todo + "\n      <input type=\"checkbox\" checked  value=\"\"> not done\n      <input type=\"checkbox\" value=\"\"> done</li>");
+    var todo = _main2.default.value('.task');
+    (0, _main2.default)("ul").append("<li>" + todo + "\n      <input type=\"radio\" checked  name=" + todo + "> not done\n      <input type=\"radio\" name=" + todo + "> done</li>");
+    clearInput();
   });
 };
 
@@ -354,9 +362,8 @@ var removeAll = function removeAll() {
   });
 };
 
-var changeCheckedStatus = function changeCheckedStatus() {
-  document.getElementById("done").checked = true;
-  document.getElementById("not-done").checked = false;
+var clearInput = function clearInput() {
+  document.querySelector('.task').value = "";
 };
 
 /***/ })
