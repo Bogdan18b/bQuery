@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: './lib/todo_list.js',
+  entry: './lib/todo_list.jsx',
   output: {
   path: path.resolve(__dirname, ''),
     filename: 'bundle.js'

@@ -354,6 +354,11 @@ var removeAll = function removeAll() {
   });
 };
 
+var changeCheckedStatus = function changeCheckedStatus() {
+  document.getElementById("done").checked = true;
+  document.getElementById("not-done").checked = false;
+};
+
 /***/ })
 
 /******/ });
