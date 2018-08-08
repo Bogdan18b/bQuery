@@ -12,7 +12,7 @@ body {
   padding: 20px;
 }
 
-ul {
+.todo-list {
   list-style: decimal;
   list-style-position: inside;
   display: flex;

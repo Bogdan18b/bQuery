@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: './lib/todo_list.jsx',
+  entry: './lib/todo_list.js',
   output: {
   path: path.resolve(__dirname, ''),
     filename: 'bundle.js'
@@ -15,12 +15,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          query: {
-            presets: ['env', 'react']
-          }
-        },
+        
       }
     ]
   },
