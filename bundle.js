@@ -296,7 +296,7 @@ const addTodo = () => {
     if (todo !== "") {
       Object(_main_js__WEBPACK_IMPORTED_MODULE_0__["default"])("ul").append(`<li>${todo}</li>
         <div class="radio-buttons">
-          <input type="radio" checked  name=${radioName}>not done</input>
+          <input type="radio" checked name=${radioName}>not done</input>
           <input type="radio" name=${radioName}> done</input>
         </div>`);
         Object(_main_js__WEBPACK_IMPORTED_MODULE_0__["default"])("p").remove();
