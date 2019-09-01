@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Bogdan18b/bQuery#readme",
   "dependencies": {
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
   }
 }
